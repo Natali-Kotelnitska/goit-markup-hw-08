@@ -1,0 +1,4 @@
+@mixin centeredFlex($property: center) {
+  display: flex;
+  align-items: $property;
+}

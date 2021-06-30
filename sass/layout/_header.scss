@@ -1,0 +1,10 @@
+.page-header {
+  border-bottom: 1px solid var(--header-line-color);
+}
+
+.page-header__content {
+  @include centeredFlex;
+  justify-content: space-between;
+
+  background-color: var(--primary-white-color);
+}

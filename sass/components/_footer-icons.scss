@@ -1,0 +1,16 @@
+.footer-icons__text {
+  margin-bottom: 20px;
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--primary-white-color);
+}
+.footer-icons--color {
+  background-color: var(--footer-icons-bgr);
+  color: var(--primary-white-color);
+}

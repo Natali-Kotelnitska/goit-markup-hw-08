@@ -1,0 +1,11 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: var(--hero-footer-bgr-color);
+}
+
+.footer-box {
+  @include centeredFlex(baseline);
+  justify-content: space-between;
+}

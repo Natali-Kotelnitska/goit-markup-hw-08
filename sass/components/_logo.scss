@@ -1,0 +1,40 @@
+.logo {
+  color: var(--accent-color);
+  font-family: Raleway, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+
+  margin-right: 93px;
+
+  transition: color var(--time-cubic);
+}
+.page-header__logo {
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+
+.logo__text--black {
+  color: var(--primary-black-color);
+
+  transition: color var(--time-cubic);
+
+  &:focus,
+  &:hover {
+    color: var(--accent-color);
+  }
+}
+
+.logo-footer {
+  color: var(--primary-white-color);
+
+  transition: color var(--time-cubic);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
