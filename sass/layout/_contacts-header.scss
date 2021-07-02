@@ -6,6 +6,10 @@
     margin-right: 50px;
     margin-left: auto;
   }
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 }
 
 .contacts__link {

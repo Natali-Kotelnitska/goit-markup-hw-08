@@ -1,19 +1,19 @@
 .clients-list {
   @extend %list;
 
-  display: flex;
-  justify-content: center;
+  // display: flex;
+  // justify-content: center;
 }
 
 .clients-list__item {
-  width: 170px;
-  height: 92px;
+  // width: 170px;
+  // height: 92px;
 
   color: var(--social-icons-color);
 
-  &:not(:last-child) {
-    margin-right: var(--card-set-gap);
-  }
+  // &:not(:last-child) {
+  //   margin-right: var(--card-set-gap);
+  // }
 }
 
 .clients-list__link {

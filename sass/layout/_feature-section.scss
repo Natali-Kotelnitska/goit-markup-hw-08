@@ -1,20 +1,21 @@
 .features {
   @extend %list;
-  display: flex;
+  // display: flex;
 }
-.features__item {
-  flex-basis: calc((100%-90px) / 4);
+// .features__item {
+//   flex-basis: calc((100%-90px) / 4);
 
-  &:not(:last-child) {
-    margin-right: 30px;
-  }
-}
+//   &:not(:last-child) {
+//     margin-right: 30px;
+//   }
 
 .feautures__description {
   margin-top: var(--card-set-gap);
 }
 .features__title {
   margin-bottom: 10px;
+
+  text-align: center;
 
   color: var(--title-text-color);
   letter-spacing: 0.03em;
@@ -32,8 +33,10 @@
   @include centeredFlex;
   justify-content: center;
 
-  width: 270px;
-  height: 120px;
+  width: 100%;
+
+  // width: 270px;
+  // height: 120px;
 
   background: var(--button-bgr-color);
   border-radius: 4px;
