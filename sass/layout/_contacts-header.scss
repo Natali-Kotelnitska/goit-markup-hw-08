@@ -1,10 +1,13 @@
 .contacts {
   @extend %list;
-  @include centeredFlex;
 
-  &__item:not(:last-child) {
-    margin-right: 50px;
-    margin-left: auto;
+  @media screen and (min-width: 1200px) {
+    @include centeredFlex;
+
+    &__item:not(:last-child) {
+      margin-right: 50px;
+      margin-left: auto;
+    }
   }
 
   @media screen and (max-width: 767px) {
@@ -12,26 +15,69 @@
   }
 }
 
-.contacts__link {
-  @include centeredFlex;
+@media screen and (max-width: 1199px) {
+  .contacts__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
 
-  padding-top: 32px;
-  padding-bottom: 32px;
+@media screen and (min-width: 1200px) {
+  .contacts__link {
+    @include centeredFlex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .contacts__icon {
   fill: currentColor;
-  margin-right: 10px;
+  margin-right: 8px;
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 10px;
+  }
+}
+
+.contacts__icon-email {
+  width: 14px;
+  height: 10px;
+
+  @media screen and (min-width: 1200px) {
+    width: 16px;
+    height: 12px;
+  }
+}
+.contacts__icon-tel {
+  width: 10px;
+  height: 14px;
+
+  @media screen and (min-width: 1200px) {
+    width: 10px;
+    height: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contacts__email {
+    padding-top: 21px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contacts__tel {
+    padding-bottom: 21px;
+  }
 }
 
 .contacts__tel,
 .contacts__email {
   color: inherit;
-
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 12px;
+  line-height: 1.16;
+  /* identical to box height */
   letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+
   text-decoration: none;
 
   transition: color var(--time-cubic);
@@ -40,6 +86,11 @@
   &:focus,
   &:active {
     color: var(--accent-color);
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.14;
   }
 }
 

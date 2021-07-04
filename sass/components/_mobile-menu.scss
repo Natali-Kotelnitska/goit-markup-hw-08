@@ -28,20 +28,30 @@
 }
 .menu-container {
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 48px 40px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-left: 40px;
   background-color: var(--primary-white-color);
   z-index: 999;
 
-  transform: translateX(100%);
-  transition: transform 250ms ease-in-out;
+  transform: translateX(120%);
+  transition: transform var(--time-cubic);
+
+  @media screen and (max-width: 400px) {
+    padding-left: 15px;
+  }
 }
 
 .menu-container.is-open {
   transform: translateX(0);
+  transition: transform var(--time-cubic);
 }
 
 .menu-container .menu-toggle {
@@ -52,10 +62,6 @@
 
 .mobile-menu {
   @extend %list;
-}
-
-.mobile-menu--margin {
-  margin-bottom: 306px;
 }
 
 .mobile-menu__item:not(:last-child) {
@@ -92,7 +98,7 @@
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
-  font-size: 34px;
+  font-size: 32px;
   line-height: 1.176;
   /* identical to box height */
   letter-spacing: 0.02em;
@@ -100,6 +106,10 @@
   color: var(--accent-color);
 
   text-decoration: none;
+
+  @media screen and (min-width: 340px) {
+    font-size: 34px;
+  }
 }
 
 .mobile-menu__email {
@@ -121,15 +131,16 @@
 .mobile-menu__social {
   display: flex;
   @extend %list;
-  padding-left: -10px;
 }
 .mobile-menu__social-link {
   display: block;
-  padding-right: 10px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.122;
   /* identical to box height, or 122% */
   letter-spacing: 0.02em;
@@ -137,14 +148,20 @@
   color: var(--accent-color);
 
   text-decoration: none;
+
+  @media screen and (min-width: 400px) {
+    font-size: 18px;
+  }
 }
 
-.mobile-menu__social-link {
-  padding-left: 10px;
+.mobile-menu__social-item:not(:first-child) {
+  margin-left: 10px;
 }
 
 .mobile_menu__social-item:not(:last-child) {
   border-right: 1px solid var(--input-textarea-border);
-
-  //   transform: rotate(90deg);
+  padding-right: 10px;
+}
+.mobile_menu__social-item:not(:first-child) {
+  margin-left: 10px;
 }

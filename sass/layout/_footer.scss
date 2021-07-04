@@ -5,7 +5,27 @@
   background-color: var(--hero-footer-bgr-color);
 }
 
-.footer-box {
-  // @include centeredFlex(baseline);
-  // justify-content: space-between;
+@media screen and (min-width: 1200px) {
+  .footer-box {
+    @include centeredFlex(baseline);
+    justify-content: space-between;
+  }
+}
+
+.footer-wrapper {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+}
+
+.footer__address-box {
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+  }
 }

@@ -1,14 +1,34 @@
 .filter-buttons {
   @extend %list;
 
-  min-width: 611px;
   display: flex;
-  justify-content: center;
+  margin-right: -8px;
 
-  margin-bottom: 50px;
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
 
-  &--gap:not(:last-child) {
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    min-width: 611px;
+    margin-bottom: 50px;
+  }
+
+  &--gap {
     margin-right: 8px;
+  }
+
+  &--gap:nth-child(-n + 3) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 15px;
+    }
   }
   &--accent {
     background-color: var(--accent-color);

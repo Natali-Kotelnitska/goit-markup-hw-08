@@ -1,5 +1,6 @@
 .footer-icons__text {
   margin-bottom: 20px;
+
   font-family: inherit;
   font-style: inherit;
   font-weight: 700;
@@ -9,7 +10,12 @@
   text-transform: uppercase;
 
   color: var(--primary-white-color);
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
+
 .footer-icons--color {
   background-color: var(--footer-icons-bgr);
   color: var(--primary-white-color);
