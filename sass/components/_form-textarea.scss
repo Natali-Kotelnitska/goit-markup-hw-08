@@ -16,10 +16,16 @@
   transition: border-color var(--time-cubic);
 
   &::placeholder {
-    font-size: 12px;
-    line-height: 1.166;
+    font-size: 14px;
+    line-height: 1.142;
+
     letter-spacing: 0.01em;
     color: var(--textarea-color);
+
+    @media screen and (min-width: 1200px) {
+      font-size: 12px;
+      line-height: 1.166;
+    }
   }
   &:focus {
     outline: none;
