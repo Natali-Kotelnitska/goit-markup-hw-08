@@ -10,15 +10,12 @@
   @extend %list;
   display: flex;
 }
-.work-section__image {
-  display: block;
-}
 
 .work-section__thumb {
   position: relative;
   display: flex;
 
-  width: 370px;
+  width: 100%;
   height: auto;
 
   &:not(:last-child) {
