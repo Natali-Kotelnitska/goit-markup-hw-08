@@ -33,16 +33,8 @@
 }
 
 .team-card {
-  padding-top: var(--card-set-gap);
-  padding-bottom: 24px;
-
+  padding: var(--card-set-gap);
   background-color: var(--primary-white-color);
-
-  @media screen and (min-width: 1200px) {
-    padding-bottom: var(--card-set-gap);
-    padding-left: 32px;
-    padding-right: 32px;
-  }
 }
 
 .team-card__subtitle {

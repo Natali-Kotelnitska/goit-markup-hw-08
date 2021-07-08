@@ -269,6 +269,11 @@ img {
   color: var(--accent-color);
 }
 
+.logo-footer {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
 @media screen and (max-width: 767px) {
   .logo-footer {
     display: flex;
@@ -302,15 +307,8 @@ img {
 }
 
 .address {
-  margin-top: 20px;
   font-style: inherit;
   font-weight: 400;
-}
-
-@media screen and (max-width: 1199px) {
-  .address {
-    margin-bottom: 60px;
-  }
 }
 
 .address__text {
@@ -471,10 +469,8 @@ img {
 }
 
 .policy-field {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: center;
+  display: inline-block;
+  text-align: center;
   font-size: 12px;
   line-height: 1.171;
   letter-spacing: 0.03em;
@@ -490,10 +486,13 @@ img {
 
 .policy--margin {
   margin-bottom: 30px;
+  text-align: center;
 }
 
 /* checkbox mark */
 .policy-field__icon {
+  display: inline-block;
+  vertical-align: middle;
   width: 16px;
   height: 15px;
   border: 1px solid var(--title-text-color);
@@ -528,8 +527,11 @@ img {
 }
 
 .policy-field__link {
-  color: var(--accent-color);
+  display: inline-block;
+  padding-top: 5px;
+  padding-bottom: 5px;
   margin-left: 4px;
+  color: var(--accent-color);
 }
 
 .main-page-form__button {
@@ -835,13 +837,13 @@ img {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .contacts__email {
     padding-top: 21px;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .contacts__tel {
     padding-bottom: 21px;
   }
@@ -890,6 +892,8 @@ img {
   background-color: var(--hero-footer-bgr-color);
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero_desk.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 @media screen and (min-width: 1200px) {
@@ -903,6 +907,7 @@ img {
 @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .hero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero_mob@2x.jpg");
+    background-position: center;
   }
 }
 
@@ -938,11 +943,17 @@ img {
   margin-right: auto;
   color: var(--primary-white-color);
   font-weight: 900;
-  font-size: 26px;
+  font-size: 20px;
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 480px) {
+  .hero__title {
+    font-size: 26px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1119,17 +1130,8 @@ img {
 }
 
 .team-card {
-  padding-top: var(--card-set-gap);
-  padding-bottom: 24px;
+  padding: var(--card-set-gap);
   background-color: var(--primary-white-color);
-}
-
-@media screen and (min-width: 1200px) {
-  .team-card {
-    padding-bottom: var(--card-set-gap);
-    padding-left: 32px;
-    padding-right: 32px;
-  }
 }
 
 .team-card__subtitle {
@@ -1233,6 +1235,18 @@ img {
 }
 
 @media screen and (max-width: 1199px) {
+  .footer-wrapper {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer__address-box {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
   .footer__address-box {
     text-align: center;
   }
@@ -1247,12 +1261,6 @@ img {
 .footer-form {
   display: flex;
   flex-direction: column;
-}
-
-@media screen and (max-width: 767px) {
-  .footer-form {
-    margin-top: 60px;
-  }
 }
 
 @media screen and (max-width: 1199px) {
@@ -1380,12 +1388,15 @@ img {
 }
 
 .form-field__label {
-  margin-bottom: 4px;
   font-size: 12px;
   line-height: 1.166;
   /* identical to box height */
   letter-spacing: 0.01em;
   color: var(--primary-text-color);
+}
+
+.form-field__label:not(:last-child) {
+  margin-bottom: 4px;
 }
 
 .form-field__input {

@@ -2,9 +2,6 @@
   display: flex;
   flex-direction: column;
 
-  @media screen and (max-width: 767px) {
-    margin-top: 60px;
-  }
   @media screen and (max-width: 1199px) {
     justify-content: center;
     align-items: center;

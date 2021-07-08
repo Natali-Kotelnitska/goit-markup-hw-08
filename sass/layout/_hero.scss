@@ -9,6 +9,8 @@
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url('../images/hero/hero_desk.jpg');
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 
   @media screen and (min-width: 1200px) {
     height: 600px;
@@ -21,6 +23,8 @@
     screen and (min-resolution: 2dppx) {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url('../images/hero/hero_mob@2x.jpg');
+
+    background-position: center;
   }
 
   @media screen and (min-width: 481px) {
@@ -57,12 +61,16 @@
 
   color: var(--primary-white-color);
   font-weight: 900;
-  font-size: 26px;
+  font-size: 20px;
   line-height: 1.62;
 
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  @media screen and (min-width: 480px) {
+    font-size: 26px;
+  }
 
   @media screen and (min-width: 1200px) {
     max-width: 696px;

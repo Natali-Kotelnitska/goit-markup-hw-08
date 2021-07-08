@@ -53,6 +53,9 @@
   }
 }
 .logo-footer {
+  display: inline-block;
+  margin-bottom: 20px;
+
   @media screen and (max-width: 767px) {
     display: flex;
     justify-content: center;

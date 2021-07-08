@@ -1,9 +1,11 @@
 .policy-field {
-  @include centeredFlex;
+  // @include centeredFlex;
 
-  flex-direction: row;
+  // flex-direction: row;
 
-  justify-content: center;
+  // justify-content: center;
+  display: inline-block;
+  text-align: center;
   font-size: 12px;
   line-height: 1.171;
   letter-spacing: 0.03em;
@@ -18,10 +20,13 @@
 
 .policy--margin {
   margin-bottom: 30px;
+  text-align: center;
 }
 
 /* checkbox mark */
 .policy-field__icon {
+  display: inline-block;
+  vertical-align: middle;
   width: 16px;
   height: 15px;
   border: 1px solid var(--title-text-color);
@@ -59,6 +64,9 @@
 }
 
 .policy-field__link {
-  color: var(--accent-color);
+  display: inline-block;
+  padding-top: 5px;
+  padding-bottom: 5px;
   margin-left: 4px;
+  color: var(--accent-color);
 }
